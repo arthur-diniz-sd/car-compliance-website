@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
+import axios from "axios";
 import Button from "../components/Button";
 import Card from "../components/Card";
 import Page from "../components/Page";
@@ -19,7 +20,22 @@ function Homepage() {
   const handleSubmitFile = () => {};
 
   const handleFormSubmit = () => {
-    console.log("Form:", formData);
+    axios
+      .post(
+        `https://formcarry.com/s/${process.env["FORMCARRY_KEY"]}`,
+        JSON.stringify(formData),
+        {
+          headers: {
+            Accept: "application/json",
+          },
+        }
+      )
+      .then(({ data }) => alert(data?.message || "Sent!"))
+      .catch((error) => {
+        const msg = error?.message;
+        console.error(error);
+        return alert("ERRO", msg && `: ${msg}`);
+      });
   };
 
   return (
