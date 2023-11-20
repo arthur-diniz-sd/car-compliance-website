@@ -1,77 +1,120 @@
+import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import Button from "../components/Button";
 import Card from "../components/Card";
 import Page from "../components/Page";
 
 function Homepage() {
+  const [formData, setFormData] = useState({
+    name: "",
+    issue: "",
+    description: "",
+  });
+
+  const handleFormChange = (e) => {
+    const { name, value } = e.target;
+    setFormData({ ...formData, [name]: value });
+  };
+
+  const handleSubmitFile = () => {};
+
+  const handleFormSubmit = () => {
+    console.log("Form:", formData);
+  };
+
   return (
-    <Page title="Prototype">
-      <Card className={"min-h-min w-full my-6 bg-gray-200 md:flex"}>
-        <img
-          src="/public/assets/Journey-Storyline-1.png"
-          className="mr-6 mb-6 rounded-lg md:w-f self-center md:mb-0"
+    <Page title="Cartlann">
+      <Card className={"min-h-min w-full my-9 bg-green1 md:flex"}>
+        <iframe
+          title="End User Mobile App"
+          className="h-64 mr-6 mb-6"
+          src="https://xd.adobe.com/embed/4ab34711-3b01-4c37-86af-93d53ce1196b-1fe0/"
+          allowFullScreen={true}
         />
         <div className="flex flex-col justify-start items-start gap-6">
           <h2 className="w-full text-stone-950 text-2xl font-bold font-mundial">
             {"End User Mobile App"}
           </h2>
           <p className="text-stone-950 text-base font-normal font-mundial">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Nobis,
-            accusamus modi excepturi nisi ipsa nesciunt pariatur illum libero
-            deserunt minima eaque ducimus odio quaerat eveniet non? Commodi,
-            sit. Laudantium, illo.
-          </p>
-          <p className="text-stone-950 text-base font-normal font-mundial">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Nobis,
-            accusamus modi excepturi nisi ipsa nesciunt pariatur illum libero
-            deserunt minima eaque ducimus odio quaerat eveniet non?
-          </p>
-          <p className="text-stone-950 text-base font-normal font-mundial">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit.
+            <p>
+              With a colossal 75 million annual procedures in the US, Cartlann
+              Care is poised to revolutionize procedural data management. Our
+              innovative EMR software offers a cost-effective solution across
+              various medical specialties, starting with Otorhinolaryngologist
+              performing pre and postoperative endoscopic evaluations and Speech
+              Language Pathologist (SLP's) performing Flexible Endoscopic
+              Evaluation of Swallowing (FEEs) procedures.
+            </p>
+            <p>
+              An Otorhinolaryngologist, commonly known as an Ear, Nose, and
+              Throat (ENT) specialist, is a medical doctor who specializes in
+              diagnosing and treating disorders and conditions related to the
+              ear, nose, throat, head, and neck. This diverse field encompasses
+              various subspecialties, including Rhinology (focused on the nose
+              and sinuses), Laryngology (dealing with the voice and larynx),
+              Otology (concerned with the ear and hearing), Head and Neck
+              Surgery (addressing tumors and conditions in the head and neck
+              region), and Pediatric Otolaryngology (specializing in children's
+              ear, nose, and throat issues), among others. There are
+              approximately 12,887 practicing Otorhinolaryngologists in the
+              United States.
+            </p>
           </p>
         </div>
       </Card>
-      <Card className={"min-h-min w-full my-6 bg-gray-200 md:flex"}>
-        <img
-          src="/public/assets/Journey-Storyline-2.png"
-          className="mr-6 mb-6 rounded-lg md:w-f self-center md:mb-0"
-        />
+      <Card className={"min-h-min w-full my-9 bg-green1 md:flex"}>
+        {/* <img
+          src="/public/assets/login-web.png"
+          className="h-64 mr-6 mb-6 rounded-lg md:w-f self-center md:mb-0"
+        /> */}
+        <iframe
+          // width="1920"
+          // height="1080"
+          className="h-64 mr-6 mb-6"
+          src="https://xd.adobe.com/embed/30568e97-7d61-4540-bec9-2be243bcaefa-6505/"
+          frameborder="0"
+          allowfullscreen
+        ></iframe>
         <div className="flex flex-col justify-start items-start gap-6">
           <h2 className="w-full text-stone-950 text-2xl font-bold font-mundial">
             {"Admin Web App"}
           </h2>
           <p className="text-stone-950 text-base font-normal font-mundial">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores
-            totam, mollitia veniam voluptate pariatur repellat iusto quas
-            laboriosam dolor aperiam odit repudiandae sapiente excepturi
-            consequatur vero eum inventore beatae? Officiis! Lorem, ipsum dolor
-            sit amet consectetur adipisicing elit. Veritatis sequi quidem
-            perferendis rem tenetur, fugiat hic quisquam necessitatibus corrupti
-            dolorem quae labore quaerat odit quia. Facilis non libero enim
-            saepe?
-          </p>
-          <p className="text-stone-950 text-base font-normal font-mundial">
-            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Corporis
-            optio mollitia ratione veniam, delectus sunt nostrum corrupti quia
-            hic, vitae, laborum doloribus libero quas harum adipisci ducimus
-            esse exercitationem ex?
-          </p>
-          <p className="text-stone-950 text-base font-normal font-mundial">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque totam
-            iusto accusantium mollitia magnam itaque, voluptates illum explicabo
-            temporibus inventore ratione ex esse dicta, repudiandae dolor
-            quibusdam, quas labore aliquam. Lorem ipsum, dolor sit amet
-            consectetur adipisicing elit.
+            <p>
+              A Speech-Language Pathologist (SLP) is a highly trained and
+              licensed healthcare professional who specializes in diagnosing,
+              treating, and helping individuals of all ages with communication
+              and swallowing disorders. SLPs play a crucial role in improving
+              speech, language, voice, fluency, and cognitive communication
+              skills. Additionally, they assist patients in overcoming
+              difficulties related to swallowing, which is known as dysphagia.
+              In the United States, where there are approximately 156,000
+              licensed SLPs, a significant proportion, estimated to be over 40%,
+              perform Flexible Endoscopic Evaluation of Swallowing (FEEs).
+            </p>
+            <p>
+              FEEs is an instrumental assessment technique where a flexible
+              endoscope is used to visualize the anatomy and function of the
+              pharynx and larynx during swallowing, aiding in the diagnosis and
+              management of swallowing disorders. This procedure allows SLPs to
+              make precise assessments and develop tailored treatment plans for
+              patients with dysphagia. Our revolutionary product allows doctors
+              and healthcare providers to easily capture procedures from an iPad
+              for only $300 a month. With 75,287 practicing healthcare providers
+              acquiring endoscopic images (12,887 ENTs, 62,400 SLPs performing
+              FEEs), we can capture 10% of this market and drive over $320
+              million in cost-savings.
+            </p>
           </p>
         </div>
       </Card>
       {/* TODO: set section height */}
       <section className="grid grid-cols-2 gap-6 h-full">
-        <div className="h-56 md:h-52 lg:44 flex flex-col">
-          <h3 className="text-stone-950 text-4xl font-bold font-mundial">
-            {"Client info"}
+        <div className="h-fit md:h-60 lg:h-44 flex flex-col">
+          <h3 className="text-stone-950 text-4xl font-bold font-mundial mb-6">
+            {"Company Information"}
           </h3>
-          <Card className={"bg-neutral-300 flex-1"}>
+          <Card className={"bg-green1 flex-1"}>
             <div className="justify-start items-start gap-3.5 inline-block sm:inline-flex">
               <img
                 src="/public/assets/user-vector.svg"
@@ -79,33 +122,33 @@ function Homepage() {
               />
               <div className="flex-col justify-start items-start gap-2.5 inline-block sm:inline-flex">
                 <div className="text-black text-2xl font-bold font-mundial">
-                  {"Ana Smith"}
+                  {"Alexis Quiles-Sinram"}
                 </div>
                 <div className="text-black text-base font-normal font-mundial">
-                  {"VividSphere Technologies"}
+                  {"alexis@cartlann.app"}
                 </div>
               </div>
             </div>
           </Card>
         </div>
-        <div className="h-56 md:h-52 lg:44 flex flex-col">
-          <h3 className="text-stone-950 text-4xl font-bold font-mundial">
-            {"App links"}
+        <div className="h-fit md:h-60 lg:h-44 flex flex-col">
+          <h3 className="text-stone-950 text-4xl font-bold font-mundial mb-6">
+            {"App Links"}
           </h3>
-          <Card className={"bg-neutral-300 flex-1"}>
-            <div className="flex flex-col lg:flex-row gap-6">
+          <Card className={"bg-green1 flex-1"}>
+            <div className="flex flex-col lg:h-full lg:items-center lg:flex-row gap-6">
               <img className="h-12 w-44" src="/public/assets/App-Store.svg" />
               <img className="h-12 w-44" src="/public/assets/Google-Play.svg" />
             </div>
           </Card>
         </div>
-        <div className="h-56 md:h-52 lg:44 flex flex-col col-span-full">
-          <h3 className="text-stone-950 text-4xl font-bold font-mundial">
+        <div className="h-fit md:h-60 lg:44 flex flex-col col-span-full">
+          <h3 className="text-stone-950 text-4xl font-bold font-mundial mb-6">
             {"Contact Form"}
           </h3>
           <Card
             className={
-              "bg-lime-200 grid grid-cols-2  border-dotted border-black border-2"
+              "bg-green1 grid grid-cols-2 border-dotted border-black border-2"
             }
           >
             <div className="w-full">
@@ -114,7 +157,11 @@ function Homepage() {
                   {"Your name"}
                 </label>
                 <input
-                  className="bg-lime-200 h-4 w-1/2 px-1 flex-grow"
+                  type="text"
+                  name="name"
+                  value={formData.name}
+                  onChange={handleFormChange}
+                  className="bg-green1 h-4 w-1/2 px-1 flex-grow"
                   style={{ direction: "rtl" }}
                 />
               </div>
@@ -123,7 +170,11 @@ function Homepage() {
                   {"Issue"}
                 </label>
                 <input
-                  className="bg-lime-200 h-4 w-1/2 px-1 flex-grow"
+                  type="text"
+                  name="issue"
+                  value={formData.issue}
+                  onChange={handleFormChange}
+                  className="bg-green1 h-4 w-1/2 px-1 flex-grow"
                   style={{ direction: "rtl" }}
                 />
               </div>
@@ -132,7 +183,10 @@ function Homepage() {
                   {"Description"}
                 </label>
                 <textarea
-                  className="bg-lime-200 h-16 w-1/2 px-1 flex-grow"
+                  name="description"
+                  value={formData.description}
+                  onChange={handleFormChange}
+                  className="bg-green1 h-16 w-1/2 px-1 flex-grow"
                   style={{ direction: "rtl" }}
                 />
               </div>
@@ -150,15 +204,19 @@ function Homepage() {
               </p>
               <Button
                 className={"h-9 w-3/4"}
-                title="Select file"
-                onClick={() => {}}
+                title="Submit file"
+                onClick={handleSubmitFile}
               />
             </div>
           </Card>
         </div>
       </section>
       <div className="w-full flex justify-center my-12 py-12">
-        <Button className={"w-1/2 h-9"} title="Submit" onClick={() => {}} />
+        <Button
+          className={"w-1/2 h-9"}
+          title="Submit"
+          onClick={handleFormSubmit}
+        />
       </div>
       <section className="grid grid-cols-2 p-6 border-t-2 border-t-black">
         <div className="w-full justify-center items-center inline-flex group">

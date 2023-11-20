@@ -6,7 +6,7 @@ import { Link } from "react-router-dom";
 const TermsAndConditions = () => {
   return (
     <Page title="Terms and Conditions">
-      <Card className={"bg-gray-200 "}>
+      <Card className={"bg-green1 "}>
         <p className="mb-6">
           <p>App Name</p>
           <p>Company Name</p>

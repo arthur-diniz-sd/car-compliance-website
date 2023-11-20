@@ -6,7 +6,7 @@ import { Link } from "react-router-dom";
 const PrivacyPolicy = () => {
   return (
     <Page title="Privacy Policy">
-      <Card className={"bg-gray-200 "}>
+      <Card className={"bg-green1 "}>
         <p>
           <p>
             <p>Company Name</p>
