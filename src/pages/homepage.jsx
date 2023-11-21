@@ -134,7 +134,7 @@ function Homepage() {
               />
               <div className="flex-col justify-start items-start gap-2.5 inline-block sm:inline-flex">
                 <div className="text-black text-2xl font-bold font-mundial">
-                  {"Alexis Quiles-Sinram"}
+                  {"Alexis Quiles"}
                 </div>
                 <div className="text-black text-base font-normal font-mundial">
                   {"alexis@cartlann.app"}
