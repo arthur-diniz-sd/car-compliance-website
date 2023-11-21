@@ -39,17 +39,17 @@ function Homepage() {
   };
 
   return (
-    <Page title="Cartlann">
+    <Page title="Cartlann Care, LLC">
       <Card className={"min-h-min w-full my-9 bg-green1 md:flex"}>
         <iframe
-          title="End User Mobile App"
+          title="Provider Tablet Application Demo"
           className="h-64 mr-6 mb-6"
           src="https://xd.adobe.com/embed/4ab34711-3b01-4c37-86af-93d53ce1196b-1fe0/"
           allowFullScreen={true}
         />
         <div className="flex flex-col justify-start items-start gap-6">
           <h2 className="w-full text-stone-950 text-2xl font-bold font-mundial">
-            {"End User Mobile App"}
+            {"Provider Tablet Application Demo"}
           </h2>
           <p className="text-stone-950 text-base font-normal font-mundial">
             <p>
@@ -79,13 +79,8 @@ function Homepage() {
         </div>
       </Card>
       <Card className={"min-h-min w-full my-9 bg-green1 md:flex"}>
-        {/* <img
-          src="/public/assets/login-web.png"
-          className="h-64 mr-6 mb-6 rounded-lg md:w-f self-center md:mb-0"
-        /> */}
         <iframe
-          // width="1920"
-          // height="1080"
+          title="Provider Web Application Demo"
           className="h-64 mr-6 mb-6"
           src="https://xd.adobe.com/embed/30568e97-7d61-4540-bec9-2be243bcaefa-6505/"
           frameborder="0"
@@ -93,7 +88,7 @@ function Homepage() {
         ></iframe>
         <div className="flex flex-col justify-start items-start gap-6">
           <h2 className="w-full text-stone-950 text-2xl font-bold font-mundial">
-            {"Admin Web App"}
+            {"Provider Web Application Demo"}
           </h2>
           <p className="text-stone-950 text-base font-normal font-mundial">
             <p>
@@ -148,7 +143,7 @@ function Homepage() {
           </Card>
         </div>
         <div className="h-fit md:h-60 lg:h-44 flex flex-col">
-        <h3 className="text-stone-950 text-2xl sm:text-4xl font-bold font-mundial mb-6">
+          <h3 className="text-stone-950 text-2xl sm:text-4xl font-bold font-mundial mb-6">
             {"App Links"}
           </h3>
           <Card className={"bg-green1 flex-1"}>
@@ -170,7 +165,7 @@ function Homepage() {
             <div className="w-full">
               <div className="flex items-center w-full mb-6 border-b-2 border-b-slate-950">
                 <label className="font-mundial font-light text-base mr-1 flex-none">
-                  {"Your name"}
+                  {"Your Name"}
                 </label>
                 <input
                   type="text"
@@ -248,7 +243,7 @@ function Homepage() {
             to="/terms-and-conditions"
             className="text-stone-950 text-base font-bold font-mundial group-hover:text-gray-700"
           >
-            {"Terms and Conditions"}
+            {"Terms & Conditions"}
           </Link>
         </div>
       </section>
