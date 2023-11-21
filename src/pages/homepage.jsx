@@ -164,7 +164,7 @@ function Homepage() {
           </h3>
           <Card
             className={
-              "bg-green1 grid grid-cols-2 border-dotted border-black border-2"
+              "bg-green1 grid grid-cols-1 border-dotted border-black border-2"
             }
           >
             <div className="w-full">
@@ -207,7 +207,7 @@ function Homepage() {
                 />
               </div>
             </div>
-            <div className="w-full px-1 flex flex-col items-center justify-center">
+            {/* <div className="w-full px-1 flex flex-col items-center justify-center">
               <img
                 src="/public/assets/ant-design_cloud-upload-outlined.svg"
                 className=""
@@ -223,7 +223,7 @@ function Homepage() {
                 title="Submit file"
                 onClick={handleSubmitFile}
               />
-            </div>
+            </div> */}
           </Card>
         </div>
       </section>
