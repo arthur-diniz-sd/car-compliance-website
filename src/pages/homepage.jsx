@@ -85,7 +85,7 @@ function Homepage() {
           src="https://xd.adobe.com/embed/30568e97-7d61-4540-bec9-2be243bcaefa-6505/"
           frameborder="0"
           allowfullscreen
-        ></iframe>
+        />
         <div className="flex flex-col justify-start items-start gap-6">
           <h2 className="w-full text-stone-950 text-2xl font-bold font-mundial">
             {"Provider Web Application Demo"}
