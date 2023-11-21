@@ -1,0 +1,19 @@
+.iframe {
+  background-color: "red";
+  width: 200%;
+  height: 580px;
+}
+
+@media (max-width: 1728px) {
+  .iframe {
+    /* height: 480px; */
+    /* width: 100%; */
+  }
+}
+
+
+@media (max-width: 768px) {
+  .iframe {
+    width: 100%;
+  }
+}
