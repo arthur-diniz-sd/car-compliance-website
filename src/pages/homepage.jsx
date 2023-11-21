@@ -127,7 +127,7 @@ function Homepage() {
       {/* TODO: set section height */}
       <section className="grid grid-cols-2 gap-6 h-full">
         <div className="h-fit md:h-60 lg:h-44 flex flex-col">
-          <h3 className="text-stone-950 text-4xl font-bold font-mundial mb-6">
+          <h3 className="text-stone-950 text-2xl sm:text-4xl font-bold font-mundial mb-6">
             {"Company Information"}
           </h3>
           <Card className={"bg-green1 flex-1"}>
@@ -148,7 +148,7 @@ function Homepage() {
           </Card>
         </div>
         <div className="h-fit md:h-60 lg:h-44 flex flex-col">
-          <h3 className="text-stone-950 text-4xl font-bold font-mundial mb-6">
+        <h3 className="text-stone-950 text-2xl sm:text-4xl font-bold font-mundial mb-6">
             {"App Links"}
           </h3>
           <Card className={"bg-green1 flex-1"}>
