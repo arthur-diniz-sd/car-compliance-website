@@ -4,7 +4,6 @@ import axios from "axios";
 import Button from "../components/Button";
 import Card from "../components/Card";
 import Page from "../components/Page";
-import "../styles/homepage.css";
 
 function Homepage() {
   const [dimensions, setDimensions] = useState({
