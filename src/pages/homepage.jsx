@@ -63,7 +63,6 @@ function Homepage() {
       <Card className={"h-full w-full my-9 bg-green1 md:flex"}>
         <div className="mr-6 h-fit">
           <iframe
-            // TODO: FIX HEIGHT
             height={
               dimensions.width >= 768
                 ? dimensions.height / 2 + 280
@@ -71,7 +70,7 @@ function Homepage() {
             }
             width={
               dimensions.width >= 768
-                ? dimensions.width / 2
+                ? dimensions.width / 2.5
                 : dimensions.width - dimensions.width / 5.8
             }
             title="Provider Tablet Application Demo"
@@ -80,10 +79,10 @@ function Homepage() {
           />
         </div>
         <div className="flex flex-col justify-start items-start gap-6">
-          <h2 className="w-full text-stone-950 text-2xl font-bold font-mundial">
+          <h2 className="w-full text-stone-950 text-4xl 2xl:text-3xl xl:text-2xl lg:text-xl md:text-lg font-bold font-mundial">
             {"Provider Tablet Application Demo"}
           </h2>
-          <p className="text-stone-950 text-lg font-normal font-mundial">
+          <p className="text-stone-950 text-3xl 2xl:text-2xl xl:text-xl lg:text-lg md:text-base font-normal font-mundial">
             <p>
               With a colossal 75 million annual procedures in the US, Cartlann
               Care is poised to revolutionize procedural data management. Our
@@ -120,7 +119,7 @@ function Homepage() {
           }
           width={
             dimensions.width >= 768
-              ? dimensions.width / 2
+              ? dimensions.width / 2.5
               : dimensions.width - dimensions.width / 5.8
           }
           title="Provider Tablet Application Demo"
@@ -129,10 +128,10 @@ function Homepage() {
           allowFullScreen={true}
         />
         <div className="flex flex-col justify-start items-start gap-6">
-          <h2 className="w-full text-stone-950 text-2xl font-bold font-mundial">
+          <h2 className="w-full text-stone-950 text-4xl 2xl:text-3xl xl:text-2xl lg:text-xl md:text-lg font-bold font-mundial">
             {"Provider Web Application Demo"}
           </h2>
-          <p className="text-stone-950 text-lg font-normal font-mundial">
+          <p className="text-stone-950 text-3xl 2xl:text-2xl xl:text-xl lg:text-lg md:text-base font-normal font-mundial">
             <p>
               A Speech-Language Pathologist (SLP) is a highly trained and
               licensed healthcare professional who specializes in diagnosing,
