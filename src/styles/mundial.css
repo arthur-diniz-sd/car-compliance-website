@@ -2,7 +2,7 @@
 
 @font-face {
   font-family: "Mundial";
-  src: url("/public/fonts/MundialRegular.otf") format("otf");
+  src: url("/fonts/MundialRegular.otf") format("otf");
   font-weight: normal;
   font-style: normal;
 }
