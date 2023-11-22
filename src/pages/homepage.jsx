@@ -67,12 +67,12 @@ function Homepage() {
             height={
               dimensions.width >= 768
                 ? dimensions.height / 2 + 280
-                : dimensions.height - (dimensions.width / 1.9)
+                : dimensions.height - dimensions.width / 1.9
             }
             width={
               dimensions.width >= 768
                 ? dimensions.width / 2
-                : dimensions.width - (dimensions.width / 5.8)
+                : dimensions.width - dimensions.width / 5.8
             }
             title="Provider Tablet Application Demo"
             src="https://xd.adobe.com/embed/4ab34711-3b01-4c37-86af-93d53ce1196b-1fe0/"
@@ -83,7 +83,7 @@ function Homepage() {
           <h2 className="w-full text-stone-950 text-2xl font-bold font-mundial">
             {"Provider Tablet Application Demo"}
           </h2>
-          <p className="text-stone-950 text-base font-normal font-mundial">
+          <p className="text-stone-950 text-lg font-normal font-mundial">
             <p>
               With a colossal 75 million annual procedures in the US, Cartlann
               Care is poised to revolutionize procedural data management. Our
@@ -122,7 +122,7 @@ function Homepage() {
           <h2 className="w-full text-stone-950 text-2xl font-bold font-mundial">
             {"Provider Web Application Demo"}
           </h2>
-          <p className="text-stone-950 text-base font-normal font-mundial">
+          <p className="text-stone-950 text-lg font-normal font-mundial">
             <p>
               A Speech-Language Pathologist (SLP) is a highly trained and
               licensed healthcare professional who specializes in diagnosing,
@@ -167,7 +167,7 @@ function Homepage() {
                 <div className="text-black text-2xl font-bold font-mundial">
                   {"Alexis Quiles"}
                 </div>
-                <div className="text-black text-base font-normal font-mundial">
+                <div className="text-black text-lg font-normal font-mundial">
                   {"alexis@cartlann.app"}
                 </div>
               </div>
@@ -196,7 +196,7 @@ function Homepage() {
           >
             <div className="w-full">
               <div className="flex items-center w-full mb-6 border-b-2 border-b-slate-950">
-                <label className="font-mundial font-light text-base mr-1 flex-none">
+                <label className="font-mundial font-light text-lg mr-1 flex-none">
                   {"Your Name"}
                 </label>
                 <input
@@ -209,7 +209,7 @@ function Homepage() {
                 />
               </div>
               <div className="flex items-center w-full mb-6 border-b-2 border-b-slate-950">
-                <label className="font-mundial font-light text-base mr-1 flex-none">
+                <label className="font-mundial font-light text-lg mr-1 flex-none">
                   {"Issue"}
                 </label>
                 <input
@@ -222,7 +222,7 @@ function Homepage() {
                 />
               </div>
               <div className="flex items-center w-full border-b-2 border-b-slate-950">
-                <label className="font-mundial font-light text-base mr-1 flex-none">
+                <label className="font-mundial font-light text-lg mr-1 flex-none">
                   {"Description"}
                 </label>
                 <textarea
@@ -239,10 +239,10 @@ function Homepage() {
                 src="/assets/ant-design_cloud-upload-outlined.svg"
                 className=""
               />
-              <p className="text-black text-base font-normal font-mundial">
+              <p className="text-black text-lg font-normal font-mundial">
                 {"Drag and Drop here"}
               </p>
-              <p className="text-center text-black text-base font-normal font-mundial px-2">
+              <p className="text-center text-black text-lg font-normal font-mundial px-2">
                 {"or"}
               </p>
               <Button
@@ -265,7 +265,7 @@ function Homepage() {
         <div className="w-full justify-center items-center inline-flex group">
           <Link
             to="/privacy-policy"
-            className="text-stone-950 text-base font-bold font-mundial group-hover:text-gray-700"
+            className="text-stone-950 text-lg font-bold font-mundial group-hover:text-gray-700"
           >
             {"Privacy Policy"}
           </Link>
@@ -273,7 +273,7 @@ function Homepage() {
         <div className="w-full justify-center items-center inline-flex group">
           <Link
             to="/terms-and-conditions"
-            className="text-stone-950 text-base font-bold font-mundial group-hover:text-gray-700"
+            className="text-stone-950 text-lg font-bold font-mundial group-hover:text-gray-700"
           >
             {"Terms & Conditions"}
           </Link>
