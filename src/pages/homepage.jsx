@@ -64,6 +64,7 @@ function Homepage() {
       <Card className={"h-full w-full my-9 bg-green1 md:flex"}>
         <div className="mr-6 h-fit">
           <iframe
+            // TODO: FIX HEIGHT
             height={
               dimensions.width >= 768
                 ? dimensions.height / 2 + 280
@@ -112,12 +113,22 @@ function Homepage() {
       </Card>
       <Card className={"h-fit w-full my-9 bg-green1 md:flex"}>
         <iframe
+          // TODO: FIX HEIGHT
+          height={
+            dimensions.width >= 768
+              ? dimensions.height / 2 + 280
+              : dimensions.height - dimensions.width / 1.9
+          }
+          width={
+            dimensions.width >= 768
+              ? dimensions.width / 2
+              : dimensions.width - dimensions.width / 5.8
+          }
           title="Provider Tablet Application Demo"
           src="https://xd.adobe.com/embed/30568e97-7d61-4540-bec9-2be243bcaefa-6505/"
           className="iframe mr-6"
           allowFullScreen={true}
         />
-
         <div className="flex flex-col justify-start items-start gap-6">
           <h2 className="w-full text-stone-950 text-2xl font-bold font-mundial">
             {"Provider Web Application Demo"}
@@ -160,7 +171,7 @@ function Homepage() {
           <Card className={"bg-green1 flex-1"}>
             <div className="justify-start items-start gap-3.5 inline-block sm:inline-flex">
               <img
-                src="/assets/user-vector.svg"
+                src="./src/assets/user-vector.svg"
                 className="w-12 h-12 p-2.5 rounded-full border border-black self-center"
               />
               <div className="flex-col justify-start items-start gap-2.5 inline-block sm:inline-flex">
@@ -180,8 +191,8 @@ function Homepage() {
           </h3>
           <Card className={"bg-green1 flex-1"}>
             <div className="flex flex-col lg:h-full lg:items-center lg:flex-row gap-6">
-              <img className="h-12 w-44" src="/assets/App-Store.svg" />
-              <img className="h-12 w-44" src="/assets/Google-Play.svg" />
+              <img className="h-12 w-44" src="./src/assets/App-Store.svg" />
+              <img className="h-12 w-44" src="./src/assets/Google-Play.svg" />
             </div>
           </Card>
         </div>
@@ -236,7 +247,7 @@ function Homepage() {
             </div>
             {/* <div className="w-full px-1 flex flex-col items-center justify-center">
               <img
-                src="/assets/ant-design_cloud-upload-outlined.svg"
+                src="./src/assets/ant-design_cloud-upload-outlined.svg"
                 className=""
               />
               <p className="text-black text-lg font-normal font-mundial">
