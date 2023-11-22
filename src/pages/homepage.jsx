@@ -170,7 +170,7 @@ function Homepage() {
           <Card className={"bg-green1 flex-1"}>
             <div className="justify-start items-start gap-3.5 inline-block sm:inline-flex">
               <img
-                src="./src/assets/user-vector.svg"
+                src="/public/user-vector.svg"
                 className="w-12 h-12 p-2.5 rounded-full border border-black self-center"
               />
               <div className="flex-col justify-start items-start gap-2.5 inline-block sm:inline-flex">
@@ -190,8 +190,8 @@ function Homepage() {
           </h3>
           <Card className={"bg-green1 flex-1"}>
             <div className="flex flex-col lg:h-full lg:items-center lg:flex-row gap-6">
-              <img className="h-12 w-44" src="./src/assets/App-Store.svg" />
-              <img className="h-12 w-44" src="./src/assets/Google-Play.svg" />
+              <img className="h-12 w-44" src="/public/App-Store.svg" />
+              <img className="h-12 w-44" src="/public/Google-Play.svg" />
             </div>
           </Card>
         </div>
@@ -246,7 +246,7 @@ function Homepage() {
             </div>
             {/* <div className="w-full px-1 flex flex-col items-center justify-center">
               <img
-                src="./src/assets/ant-design_cloud-upload-outlined.svg"
+                src="/public/ant-design_cloud-upload-outlined.svg"
                 className=""
               />
               <p className="text-black text-lg font-normal font-mundial">
