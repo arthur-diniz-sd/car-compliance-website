@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import axios from "axios";
 import Button from "../components/Button";
@@ -7,11 +7,31 @@ import Page from "../components/Page";
 import "../styles/homepage.css";
 
 function Homepage() {
+  const [dimensions, setDimensions] = useState({
+    width: window.innerWidth,
+    height: window.innerHeight,
+  });
+
   const [formData, setFormData] = useState({
     name: "",
     issue: "",
     description: "",
   });
+
+  const updateDimensions = () => {
+    setDimensions({
+      width: window.innerWidth,
+      height: window.innerHeight,
+    });
+  };
+
+  useEffect(() => {
+    window.addEventListener("resize", updateDimensions);
+
+    return () => {
+      window.removeEventListener("resize", updateDimensions);
+    };
+  }, []);
 
   const handleFormChange = (e) => {
     const { name, value } = e.target;
@@ -41,13 +61,24 @@ function Homepage() {
 
   return (
     <Page title="Cartlann Care, LLC">
-      <Card className={"h-fit w-full my-9 bg-green1 md:flex"}>
-        <iframe
-          title="Provider Tablet Application Demo"
-          src="https://xd.adobe.com/embed/4ab34711-3b01-4c37-86af-93d53ce1196b-1fe0/"
-          className="iframe mr-6"
-          allowFullScreen={true}
-        />
+      <Card className={"h-full w-full my-9 bg-green1 md:flex"}>
+        <div className="mr-6 h-fit">
+          <iframe
+            height={
+              dimensions.width >= 768
+                ? dimensions.height / 2 + 280
+                : dimensions.height - (dimensions.width / 1.9)
+            }
+            width={
+              dimensions.width >= 768
+                ? dimensions.width / 2
+                : dimensions.width - (dimensions.width / 5.8)
+            }
+            title="Provider Tablet Application Demo"
+            src="https://xd.adobe.com/embed/4ab34711-3b01-4c37-86af-93d53ce1196b-1fe0/"
+            allowFullScreen={true}
+          />
+        </div>
         <div className="flex flex-col justify-start items-start gap-6">
           <h2 className="w-full text-stone-950 text-2xl font-bold font-mundial">
             {"Provider Tablet Application Demo"}
