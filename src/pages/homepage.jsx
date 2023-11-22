@@ -61,7 +61,7 @@ function Homepage() {
   return (
     <Page title="Cartlann Care, LLC">
       <Card className={"h-full w-full my-9 bg-green1 md:flex"}>
-        <div className="mr-6 h-fit">
+        <div className="mr-6 h-fit flex">
           <iframe
             height={
               dimensions.width >= 768
@@ -111,20 +111,19 @@ function Homepage() {
       </Card>
       <Card className={"h-fit w-full my-9 bg-green1 md:flex"}>
         <iframe
-          // TODO: FIX HEIGHT
+          className="mr-6"
           height={
             dimensions.width >= 768
-              ? dimensions.height / 2 + 280
+              ? dimensions.height / 1.7
               : dimensions.height - dimensions.width / 1.9
           }
           width={
             dimensions.width >= 768
-              ? dimensions.width / 2.5
+              ? dimensions.width * 5
               : dimensions.width - dimensions.width / 5.8
           }
           title="Provider Tablet Application Demo"
           src="https://xd.adobe.com/embed/30568e97-7d61-4540-bec9-2be243bcaefa-6505/"
-          className="iframe mr-6"
           allowFullScreen={true}
         />
         <div className="flex flex-col justify-start items-start gap-6">
