@@ -182,7 +182,7 @@ function Homepage() {
             </div>
           </Card>
         </div>
-        <div className="h-fit md:h-60 lg:h-44 flex flex-col">
+        <div className="h-fit h-64 md:h-60 lg:h-44 flex flex-col">
           <h3 className="text-stone-950 text-2xl sm:text-4xl font-bold font-mundial mb-6">
             {"App Links"}
           </h3>
