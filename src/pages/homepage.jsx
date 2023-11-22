@@ -82,7 +82,7 @@ function Homepage() {
           <h2 className="w-full text-stone-950 text-6xl 2xl:text-5xl xl:text-4xl lg:text-3xl md:text-2xl sm:text-xl font-bold font-mundial">
             {"Provider Tablet Application Demo"}
           </h2>
-          <p className="text-stone-950 text-5xl 2xl:text-4xl xl:text-3xl lg:text-2xl md:text-xl sm:text-base font-normal font-mundial">
+          <p className="text-stone-950 text-5xl 2xl:text-3xl xl:text-2xl lg:text-xl md:text-base sm:text-sm font-normal font-mundial">
             <p>
               With a colossal 75 million annual procedures in the US, Cartlann
               Care is poised to revolutionize procedural data management. Our
@@ -130,7 +130,7 @@ function Homepage() {
           <h2 className="w-full text-stone-950 text-6xl 2xl:text-5xl xl:text-4xl lg:text-3xl md:text-2xl sm:text-xl font-bold font-mundial">
             {"Provider Web Application Demo"}
           </h2>
-          <p className="text-stone-950 text-5xl 2xl:text-4xl xl:text-3xl lg:text-2xl md:text-xl sm:text-base font-normal font-mundial">
+          <p className="text-stone-950 text-5xl 2xl:text-3xl xl:text-2xl lg:text-xl md:text-base sm:text-sm font-normal font-mundial">
             <p>
               A Speech-Language Pathologist (SLP) is a highly trained and
               licensed healthcare professional who specializes in diagnosing,
