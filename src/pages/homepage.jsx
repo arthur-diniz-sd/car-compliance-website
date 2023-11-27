@@ -96,8 +96,8 @@ function Homepage() {
           <h3 className="text-stone-900 text-2xl sm:text-4xl font-bold font-mundial mb-6">
             {"Company Information"}
           </h3>
-          <Card className={"bg-green1 flex-1"}>
-            <div className="justify-start items-start gap-3.5 inline-block sm:inline-flex">
+          <Card className={"bg-green1 flex-1 justify-center"}>
+            <div className="justify-start items-start gap-3.5 inline-block sm:inline-flex lg:h-full lg:items-center lg:flex-row">
               <img
                 src="/user-vector.svg"
                 className="w-12 h-12 p-2.5 rounded-full border border-black self-center"
