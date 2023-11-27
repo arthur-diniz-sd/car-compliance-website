@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import Button from "../components/Button";
 import Card from "../components/Card";
@@ -6,11 +6,31 @@ import Page from "../components/Page";
 import axios from "axios";
 
 function Homepage() {
+  const [dimensions, setDimensions] = useState({
+    width: window.innerWidth,
+    height: window.innerHeight,
+  });
+
   const [formData, setFormData] = useState({
     name: "",
     issue: "",
     description: "",
   });
+
+  const updateDimensions = () => {
+    setDimensions({
+      width: window.innerWidth,
+      height: window.innerHeight,
+    });
+  };
+
+  useEffect(() => {
+    window.addEventListener("resize", updateDimensions);
+
+    return () => {
+      window.removeEventListener("resize", updateDimensions);
+    };
+  }, []);
 
   const handleFormChange = (e) => {
     const { name, value } = e.target;
@@ -40,7 +60,82 @@ function Homepage() {
 
   return (
     <Page title="Cartlann Care, LLC">
-      <Card className={"h-full w-full bg-green1 mb-6"}>
+      <Card className={"h-full w-full my-9 bg-green1 md:flex"}>
+        <div className="mr-6 h-fit flex">
+          {/* TODO: HERE */}
+          <iframe
+            height={
+              dimensions.width >= 768
+                ? dimensions.height / 2 + 280
+                : dimensions.height - dimensions.width / 1.9
+            }
+            width={
+              dimensions.width >= 768
+                ? dimensions.width / 2
+                : dimensions.width - dimensions.width / 5.8
+            }
+            title="Provider Tablet Application Demo"
+            src="https://xd.adobe.com/embed/4ab34711-3b01-4c37-86af-93d53ce1196b-1fe0/"
+            allowFullScreen={true}
+          />
+        </div>
+        <div className="flex flex-col justify-start items-start gap-6">
+          <h2 className="w-full text-stone-950 text-4xl 2xl:text-3xl xl:text-2xl lg:text-xl md:text-xl font-bold font-mundial">
+            {"Provider Tablet Application Demo"}
+          </h2>
+          <p className="text-stone-900 font-mundial text-xs md:text-sm lg:text-base 2xl:text-xl">
+            <p>
+              With a colossal 75 million annual procedures in the US, Cartlann
+              Care is poised to revolutionize procedural data management. Our
+              innovative EMR software offers a cost-effective solution across
+              various medical specialties, starting with Otorhinolaryngologist
+              performing pre and postoperative endoscopic evaluations and Speech
+              Language Pathologist (SLP's) performing Flexible Endoscopic
+              Evaluation of Swallowing (FEEs) procedures.
+            </p>
+            <p>
+              An Otorhinolaryngologist, commonly known as an Ear, Nose, and
+              Throat (ENT) specialist, is a medical doctor who specializes in
+              diagnosing and treating disorders and conditions related to the
+              ear, nose, throat, head, and neck. This diverse field encompasses
+              various subspecialties, including Rhinology (focused on the nose
+              and sinuses), Laryngology (dealing with the voice and larynx),
+              Otology (concerned with the ear and hearing), Head and Neck
+              Surgery (addressing tumors and conditions in the head and neck
+              region), and Pediatric Otolaryngology (specializing in children's
+              ear, nose, and throat issues), among others. There are
+              approximately 12,887 practicing Otorhinolaryngologists in the
+              United States.
+            </p>
+            <p>
+              A Speech-Language Pathologist (SLP) is a highly trained and
+              licensed healthcare professional who specializes in diagnosing,
+              treating, and helping individuals of all ages with communication
+              and swallowing disorders. SLPs play a crucial role in improving
+              speech, language, voice, fluency, and cognitive communication
+              skills. Additionally, they assist patients in overcoming
+              difficulties related to swallowing, which is known as dysphagia.
+              In the United States, where there are approximately 156,000
+              licensed SLPs, a significant proportion, estimated to be over 40%,
+              perform Flexible Endoscopic Evaluation of Swallowing (FEEs).
+            </p>
+            <p>
+              FEEs is an instrumental assessment technique where a flexible
+              endoscope is used to visualize the anatomy and function of the
+              pharynx and larynx during swallowing, aiding in the diagnosis and
+              management of swallowing disorders. This procedure allows SLPs to
+              make precise assessments and develop tailored treatment plans for
+              patients with dysphagia. Our revolutionary product allows doctors
+              and healthcare providers to easily capture procedures from an iPad
+              for only $300 a month. With 75,287 practicing healthcare providers
+              acquiring endoscopic images (12,887 ENTs, 62,400 SLPs performing
+              FEEs), we can capture 10% of this market and drive over $320
+              million in cost-savings.
+            </p>
+          </p>
+        </div>
+      </Card>
+      {/* <Card className={"h-full w-full bg-green1 mb-6"}>
         <p className="text-stone-900 font-mundial text-sm sm:text-base md:text-lg lg:text-xl xl:text-2xl 2xl:text-3xl">
           <p>
             With a colossal 75 million annual procedures in the US, Cartlann
@@ -90,7 +185,7 @@ function Homepage() {
             in cost-savings.
           </p>
         </p>
-      </Card>
+      </Card> */}
       <section className="grid grid-cols-2 gap-6 h-full">
         <div className="h-fit sm:h-60 flex flex-col">
           <h3 className="text-stone-900 text-2xl sm:text-4xl font-bold font-mundial mb-6">
